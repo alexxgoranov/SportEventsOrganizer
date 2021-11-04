@@ -5,7 +5,7 @@ import { CONTENT_ROUTES } from './shared/content-routes';
 
   const routes: Routes = [
 
-    { path: '', redirectTo: 'pages/login', pathMatch: 'full' },
+    { path: '', redirectTo: 'pages/sign-in', pathMatch: 'full' },
     { path: '', component: ContentPagesLayoutComponent, data: { title: 'content Views' }, children: CONTENT_ROUTES },
     {
       path: '**',

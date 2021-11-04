@@ -4,11 +4,12 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const CONTENTPAGESROUTE: Routes = [
   {
-    path: 'sing-in',
-    component: SignUpComponent
+    path: 'sign-in',
+    component: SignInComponent
   },
   {
     path: 'sign-up',
@@ -29,7 +30,7 @@ const CONTENTPAGESROUTE: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(CONTENTPAGESROUTE)
+    RouterModule.forChild(CONTENTPAGESROUTE)
   ]
 })
 export class ContentPagesRoutingModule { }

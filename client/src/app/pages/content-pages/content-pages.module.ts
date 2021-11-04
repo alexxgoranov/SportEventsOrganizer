@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ContentPagesRoutingModule } from './content-pages-routing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ForgotPasswordComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ContentPagesRoutingModule
   ]
 })
 export class ContentPagesModule { }
