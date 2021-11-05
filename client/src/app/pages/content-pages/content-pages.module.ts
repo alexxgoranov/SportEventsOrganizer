@@ -5,6 +5,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContentPagesRoutingModule } from './content-pages-routing.module';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    ContentPagesRoutingModule
+    ContentPagesRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ContentPagesModule { }
