@@ -1,1 +1,35 @@
-<p>sign-up works!</p>
+<div class="row full-height-vh">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+      <div class="content-form">
+        <form>
+          <div class="avatar">
+            <i class="sign-up fas fa-user-plus fa-4x"></i>
+        </div>
+          <h2 class="text-center mt-5">Register</h2>
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" name="username" placeholder="User name" />
+          </div>
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" name="userEmail" placeholder="User email" />
+          </div>
+          <div class="form-group mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password" />
+          </div>
+          <div class="form-group mb-3">
+            <input type="password" class="form-control" name="repeatPassword" placeholder="Repeat a password" />
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-lg btn-primary">
+              Sign in
+            </button>
+          </div>
+          <p class="text-center small mt-1">Have an account?
+            <a [routerLink]="['/pages/sign-in']">
+              Sign in here!
+            </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  

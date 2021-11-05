@@ -4,6 +4,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContentPagesRoutingModule } from './content-pages-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ContentPagesRoutingModule } from './content-pages-routing.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     ContentPagesRoutingModule
   ]
 })
