@@ -36,7 +36,7 @@
   }
 
   .form-control {
-    min-height: 41px;
+    min-height: 42px;
     background: #fff;
     box-shadow: none !important;
     border-color: #e3e3e3;
@@ -47,18 +47,18 @@
   }
 
   .form-control,
-  .btn {
+  .btn-confirm {
     border-radius: 2px;
   }
 
-  .btn:hover,
-  .btn:focus {
+  .btn-confirm:hover,
+  .btn-confirm:focus {
     background: #50b8b3;
     outline: none !important;
   }
 
 
-  .btn {
+  .btn-confirm {
     font-size: 16px;
     font-weight: bold;
     background: rgb(3, 3, 97);
