@@ -6,6 +6,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ContentPagesRoutingModule } from './content-pages-routing.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InputShowPasswordModule } from 'src/app/directives/input-show-password/input-show-password.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     ContentPagesRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputShowPasswordModule
   ]
 })
 export class ContentPagesModule { }
