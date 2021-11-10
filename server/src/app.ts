@@ -10,5 +10,6 @@ const port = config.get<number>('port');
 const app = express();
 
 app.listen(port, async () => {
+    await connect();
     routes(app);
 })
