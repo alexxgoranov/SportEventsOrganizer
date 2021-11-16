@@ -1,1 +1,12 @@
-<p>navbar works!</p>
+<nav>
+  <label class="logo text-nowrap col">Sport Events organizer</label>
+  <ul>
+    <li *ngFor="let liEl of navItems">
+      <a [routerLink]="[liEl.route]" routerLinkActive="active" (click)="onClickLiElement(liEl.route)">
+        <i class="{{liEl.icon}}"></i>
+        {{liEl.name}}
+        <div id="indicator"></div>
+      </a>
+    </li>
+  </ul>
+</nav>

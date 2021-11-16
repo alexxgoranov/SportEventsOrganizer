@@ -1,0 +1,35 @@
+nav {
+  background: #243545;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  label {
+    &.logo {
+      color: white;
+      font-size: 30px;
+      line-height: 70px;
+      padding: 0 100px;
+      font-weight: bold;
+    }
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    padding: 4px;
+
+    & li {
+      color: white;
+      padding: 2px;
+      margin: 0 40px;
+    }
+  }
+}
