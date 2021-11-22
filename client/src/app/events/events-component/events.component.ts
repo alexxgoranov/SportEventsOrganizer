@@ -7,9 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
+  events:any =[ 
+    {
+      name:"Table tennis tournament",
+      location: "Sports Sofia",
+      participants:100,
+      startData: "10.10.2021",
+      startHour: "15:00",
+      award: "100lv",
+      hoursDuration: 5
+    },
+    {
+      name:"Table tennis tournament 2",
+      location: "Sports Sofia",
+      participants:100,
+      startData: "10.10.2021",
+      startHour: "15:00",
+      award: "100lv",
+      hoursDuration: 5
+    },
+    {
+      name:"Table tennis tournament 3",
+      location: "Sports Sofia",
+      participants:100,
+      startData: "10.10.2021",
+      startHour: "15:00",
+      award: "100lv",
+      hoursDuration: 5
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {
+    console.log('hERRE');
   }
 
 }
