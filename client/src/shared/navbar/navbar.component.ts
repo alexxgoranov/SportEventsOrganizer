@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 
 interface NavBarMenu {
@@ -51,7 +51,8 @@ const allNavbarItems = [
 
 export class NavbarComponent implements OnInit {
 
-
+  sidebarExpanded: boolean;
+  @ViewChild('navUl', { static: true }) navUl: ElementRef
   navItems:NavBarMenu[] = [];
   constructor() { }
 
@@ -62,6 +63,15 @@ export class NavbarComponent implements OnInit {
 
   onClickLiElement(route: string) {
 
+  }
+
+  clickBars(): void {
+    this.sidebarExpanded = !this.sidebarExpanded;
+    if (this.sidebarExpanded) {
+      this.navUl.nativeElement.style.left = 0;
+    } else {
+      this.navUl.nativeElement.style.left = -100 + '%';
+    }
   }
 
 }

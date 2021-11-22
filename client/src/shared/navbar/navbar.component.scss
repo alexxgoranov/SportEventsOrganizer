@@ -3,11 +3,12 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  min-height: 80px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  flex-wrap: wrap;
+  max-height: 100px;
+  // justify-content: end;
 
   label {
     &.logo {
@@ -16,20 +17,80 @@ nav {
       line-height: 70px;
       padding: 0 100px;
       font-weight: bold;
+      white-space: nowrap !important;
     }
+  }
+
+  .btn-sidebar-sandwitch {
+    display: none;
   }
 
   & ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-right: 20px;
     padding: 4px;
+    list-style-type: none;
+    float: right;
+    // justify-content: end;
+
+
 
     & li {
       color: white;
       padding: 2px;
       margin: 0 40px;
+      white-space: nowrap !important;
+
+      & a #indicator {
+        width: 0;
+        height: 3px;
+        background: white;
+        transition: 0.5s width ease-in-out;
+        border-radius: 5px;
+      }
+
+      &>a:hover #indicator,
+      a.active #indicator {
+        width: 100%;
+      }
+
+
+    }
+  }
+}
+
+@media (max-width: 858px) {
+  nav {
+    flex-wrap: nowrap;
+    label {
+      &.logo {
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        padding-left: 30px;
+        font-weight: bold;
+        white-space: nowrap !important;
+      }
+    }
+    & ul {
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 40px;
+      background: #329680;
+      bottom: 0;
+      left: -100%;
+    }
+
+    & .btn-sidebar-sandwitch {
+      font-size: 20px;
+      color: white;
+      float: right;
+      line-height: 20px;
+      cursor: pointer;
+      display: inline-flex;
     }
   }
 }
