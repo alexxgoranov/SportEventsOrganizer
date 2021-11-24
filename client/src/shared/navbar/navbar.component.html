@@ -1,12 +1,8 @@
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col-12"> -->
 <nav>
   <label class="logo flex-grow-0 flex-md-grow-1">Sport Events organizer</label>
   <button class="btn btn-sidebar-sandwitch flex-grow-0 flex-md-grow-1" (click)="clickBars()">
     <i class="fas fa-bars"></i>
   </button>
-  <!-- <input type="checkbox" id="sidebar-status" name="sidebar-status" [(ngModel)]="sidebarExpanded" /> -->
   <ul #navUl>
     <li *ngFor="let liEl of navItems">
       <a [routerLink]="[liEl.route]" routerLinkActive="active" (click)="onClickLiElement(liEl.route)">
@@ -17,6 +13,4 @@
     </li>
   </ul>
 </nav>
-<!-- </div>
-  </div>
-</div> -->
+

@@ -9,6 +9,7 @@ export class EventsComponent implements OnInit {
 
   events:any =[ 
     {
+      id: 1,
       name:"Table tennis tournament",
       location: "Sports Sofia",
       participants:100,
@@ -18,6 +19,7 @@ export class EventsComponent implements OnInit {
       hoursDuration: 5
     },
     {
+      id: 2,
       name:"Table tennis tournament 2",
       location: "Sports Sofia",
       participants:100,
@@ -27,6 +29,7 @@ export class EventsComponent implements OnInit {
       hoursDuration: 5
     },
     {
+      id: 3,
       name:"Table tennis tournament 3",
       location: "Sports Sofia",
       participants:100,

@@ -29,18 +29,20 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 4px;
     list-style-type: none;
-    float: right;
+    margin-bottom: 0;
     // justify-content: end;
-
-
 
     & li {
       color: white;
       padding: 2px;
       margin: 0 40px;
       white-space: nowrap !important;
+
+      & a {
+        text-decoration: none;
+        color: white;
+      }
 
       & a #indicator {
         width: 0;
