@@ -6,7 +6,12 @@
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col flex-grow-1">
-                  <h4 class="mb-0">{{event.name}}</h4>
+                  <h4 class="mb-0">
+                    {{event.name}}
+                    Watch heree:
+                    {{myPromise | async }}
+                    {{observable$ | async}}
+                  </h4>
                 </div>
                 <div class="col flex-grow-0">
                   <button type="button" class="btn btn-sm btn-outline-white">

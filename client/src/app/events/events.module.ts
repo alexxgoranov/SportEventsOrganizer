@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { EventsComponent } from './events-component/events.component';
 import { EventsRoutingModule } from './events-routing.module';
 import { ParticipantsComponent } from './participants/participants.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,7 +11,8 @@ import { ParticipantsComponent } from './participants/participants.component';
   declarations: [EventsComponent, ParticipantsComponent],
   imports: [
     CommonModule, 
-    EventsRoutingModule
+    EventsRoutingModule,
+    RouterModule
   ]
 })
 export class EventsModule { }

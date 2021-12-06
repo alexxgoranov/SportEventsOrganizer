@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { EventsComponent } from './events-component/events.component';
 import { ParticipantsComponent } from './participants/participants.component';
 
@@ -8,12 +8,12 @@ import { ParticipantsComponent } from './participants/participants.component';
 const EVENTS_ROUTES: Routes = [
   {
     path: '',
-    component: EventsComponent,
-    children: [{
-      path: 'participants',
-      component: ParticipantsComponent
-    }]
+    component: EventsComponent
   },
+  {
+    path: 'participants/:id',
+    component: ParticipantsComponent
+  }
 
 ]
 
@@ -23,6 +23,6 @@ const EVENTS_ROUTES: Routes = [
     CommonModule,
     RouterModule.forChild(EVENTS_ROUTES)
   ],
-  exports:[RouterModule]
+  exports: [RouterModule]
 })
 export class EventsRoutingModule { }
