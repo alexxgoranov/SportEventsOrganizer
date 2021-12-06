@@ -10,6 +10,7 @@ export class ParticipantsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('in participants');
   }
 
 }
