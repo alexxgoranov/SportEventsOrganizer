@@ -12,5 +12,11 @@
       </a>
     </li>
   </ul>
+  <button (click)="increment()">Increment</button>
+  <div class="text-white">Current Count: {{ count$ | async }}</div>
+
+<button (click)="decrement()">Decrement</button>
+
+<button (click)="reset()">Reset Counter</button>
 </nav>
 

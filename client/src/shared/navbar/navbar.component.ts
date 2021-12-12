@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { increment, decrement, reset } from 'src/app/counter.actions';
 
 interface NavBarMenu {
   route: string;
@@ -51,13 +53,17 @@ const allNavbarItems = [
 
 export class NavbarComponent implements OnInit {
 
+  count$: Observable<number>;
   sidebarExpanded: boolean;
   @ViewChild('navUl', { static: true }) navUl: ElementRef
-  navItems:NavBarMenu[] = [];
-  constructor() { }
+  navItems: NavBarMenu[] = [];
+  constructor(private store: Store<{count: number}>) { 
+    this.count$ = store.select('count');
+
+  }
 
   ngOnInit(): void {
-    this.navItems = allNavbarItems // TO DO filter for every role
+    this.navItems = allNavbarItems; // TO DO filter for every role
   }
 
 
@@ -73,5 +79,22 @@ export class NavbarComponent implements OnInit {
       this.navUl.nativeElement.style.left = -100 + '%';
     }
   }
+
+  increment(): void{
+    this.store.dispatch(increment());
+
+  }
+
+  decrement(): void {
+    this.store.dispatch(decrement());
+
+  }
+
+  reset(): void {
+    this.store.dispatch(reset());
+  }
+
+
+
 
 }
