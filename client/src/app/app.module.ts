@@ -7,6 +7,7 @@ import { ContentPagesLayoutComponent } from './layouts/content_pages_layout/cont
 import { SharedModule } from 'src/shared/shared.module';
 import { InAppLayoutComponent } from './layouts/in_app_layouts/in-app-layout/in-app-layout.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
