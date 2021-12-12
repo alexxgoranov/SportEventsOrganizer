@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { truncateSync } from 'fs';
 import { CreateEventInput, DeleteEventInput, ReadEventInput, UpdateEventInput } from '../schemas/event.schema';
 import { createEvent, deleteEvent, findAndUpdateEvent, findEvent } from '../services/event.service';
 
@@ -26,19 +25,19 @@ export async function createEventHandler(req: Request<{}, {}, CreateEventInput["
 export async function updateEventHandler(req: Request<{}, {}, UpdateEventInput["params"]>,
     response: Response) {
         const userId = response.locals.user._id;
-        const eventId = req.params.eventId;
+        // const eventId = req.params.eventId;
         
         const update = req.body;
         
-        const event = await findEvent({eventId})
+        // const event = await findEvent({eventId})
 
         if (!event){
             return response.sendStatus(404);
         }
 
-        if (String(event.user) !== userId){
-            return response.sendStatus(403);
-        }
+        // if (String(event.user) !== userId){
+        //     return response.sendStatus(403);
+        // }
 
         const updatedEvent = await  findAndUpdateEvent({event}, update, {new: true})
 
@@ -48,8 +47,8 @@ export async function updateEventHandler(req: Request<{}, {}, UpdateEventInput["
 export async function getEventHandler(req: Request<{}, {}, ReadEventInput["params"]>,
     response: Response) {
         const userId = response.locals.user._id;
-        const eventId = req.params.eventId;
-        const event = await findEvent({eventId})
+        // const eventId = req.params.eventId;
+        // const event = await findEvent({eventId})
 
         if (!event){
             return response.sendStatus(404);
@@ -60,17 +59,17 @@ export async function getEventHandler(req: Request<{}, {}, ReadEventInput["param
 export async function deleteEventHandler(req: Request<{}, {}, DeleteEventInput["params"]>,
     response: Response) {
         const userId = response.locals.user._id;
-        const eventId = req.params.eventId;
+        // const eventId = req.params.eventId;
                 
-        const event = await findEvent({eventId})
+        // const event = await findEvent({eventId})
 
         if (!event){
             return response.sendStatus(404);
         }
 
-        if (String(event.user) !== userId){
-            return response.sendStatus(403);
-        }
+        // if (String(event.user) !== userId){
+        //     return response.sendStatus(403);
+        // }
 
         await  deleteEvent({event});
 

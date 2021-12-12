@@ -11,13 +11,15 @@ import { createEventSchema, deleteEventSchema, getEventSchema, updateEventSchema
 import { createEventHandler, deleteEventHandler, getEventHandler, updateEventHandler } from './controller/event.controller';
 
 function routes(app: Express) {
-    app.get('/apiTestCall', (req: Request, response: Response) => {
-        response.sendStatus(200);
-    } );
+    // app.post('/api/auth/sign-up', (req: Request, response: Response) => {
+    //     response.status(200).send('It is working');
+    // } );
 
-    app.post('/api/users', validateResource(createUserSchema), createUserHandler);
+    app.post('/api/auth/sign-up', validateResource(createUserSchema), createUserHandler);
 
-    app.post('/api/sessions', validateResource(createSessionSchema), createSessionHandler);
+    app.post('/api/auth/sign-in', validateResource(createSessionSchema), createSessionHandler);
+
+
     app.get('/api/sessions', validateResource(createSessionSchema), requireUser, getUserSessionHandler);
     app.delete('/api/sessions', validateResource(createSessionSchema), requireUser, deleteSessionHandler);
 
